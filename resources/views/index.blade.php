@@ -35,12 +35,12 @@
                 <div class="navbar-header">
                     <div class="container d-flex">
                         <!-- App Search-->
-                        <form class="app-search d-none d-lg-block">
+                        <!-- <form class="app-search d-none d-lg-block">
                             <div class="position-relative">
                                 <input type="text" class="form-control" placeholder="Search...">
                                 <span class="bx bx-search-alt"></span>
                             </div>
-                        </form>
+                        </form> -->
 
                         
                     </div>
@@ -70,18 +70,20 @@
                         <div class="row">
                             <div class="col">
                                 <div class="row">
-                                    <div class="col-xl-4 col-sm-6">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="product-img position-relative">
-                                                    <img src="assets/images/product/img-1.png" alt="" class="img-fluid mx-auto d-block">
-                                                </div>
-                                                <div class="mt-4 text-center">
-                                                    <h5 class="mb-3 text-truncate"><a href="javascript: void(0);" class="text-dark">Half sleeve T-shirt </a></h5>
+                                    @foreach ($images as $image)
+                                        <div class="col-xl-4 col-sm-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="product-img position-relative">
+                                                        <img src="{{ $image->link }}" alt="" class="img-fluid mx-auto d-block">
+                                                    </div>
+                                                    <div class="mt-4 text-center">
+                                                        <h5 class="mb-3 text-truncate"><a href="javascript: void(0);" class="text-dark">Half sleeve T-shirt </a></h5>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                                 <!-- end row -->
 
